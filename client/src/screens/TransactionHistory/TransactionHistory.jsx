@@ -21,7 +21,7 @@ const TransactionHistory = () => {
     const fetchData = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:5500/gettransaction",
+          "https://hopechain-web-3-backend.vercel.app/gettransaction",
           {
             wallet_id: wallet_id,
           }
