@@ -62,7 +62,7 @@ const TransactionHistory = () => {
               <tr key={index}>
                 <td className="network-cell">
                   <img
-                    src={"/eth.jpg"}
+                    src={transaction.blockchain === "MATIC-AMOY" ? "/polygon.png" :"/eth.jpg"}
                     alt={`${transaction.blockchain} logo`}
                     className="network-logo"
                   />
