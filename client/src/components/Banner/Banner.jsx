@@ -46,12 +46,11 @@ const Banner = () => {
           }}
         >
           <div style={{
-              color: "#fff",
               textAlign: "center",
               backgroundColor: "rgba(43, 47, 42, 0.5)",
               padding: "20px",
             }}>
-            <h1>{slides[currentSlide].text}</h1>
+            <h1 style={{color:"#fff"}}>{slides[currentSlide].text}</h1>
           </div>
         </div>
       </div>
