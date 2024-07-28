@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useAuthStore from "../../store/authStore";
 import axios from "axios";
-import "./Balance.css"; // CSS dosyasını ekleyin
+import "./Balance.css"; 
 
 export default function Balance() {
   const { wallet_id, blockchain } = useAuthStore();
