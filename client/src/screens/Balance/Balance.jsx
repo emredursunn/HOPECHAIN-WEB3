@@ -10,7 +10,7 @@ export default function Balance() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post("http://localhost:5500/getbalance", {
+        const response = await axios.post("https://hopechain-web-3-backend.vercel.app/getbalance", {
           wallet_id,
         });
         console.log(response.data);
