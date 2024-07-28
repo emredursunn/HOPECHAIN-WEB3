@@ -18,7 +18,7 @@ app.use(express.json());
 
 
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: 'https://hopechain-web-3-frontend.vercel.app'
 };
 
 app.use(cors(corsOptions));
