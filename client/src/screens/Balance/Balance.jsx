@@ -4,13 +4,13 @@ import axios from "axios";
 import "./Balance.css"; // CSS dosyasını ekleyin
 
 export default function Balance() {
-  const { wallet_id } = useAuthStore();
+  const { wallet_id, blockchain } = useAuthStore();
   const [tokenBalances, setTokenBalances] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post("https://hopechain-web-3-backend.vercel.app/getbalance", {
+        const response = await axios.post("http://localhost:5500/getbalance", {
           wallet_id,
         });
         console.log(response.data);
@@ -25,15 +25,33 @@ export default function Balance() {
   return (
     <div className="balance-container">
       <h1>Token Balances</h1>
-      <p>Wallet Id: {wallet_id}</p>
-      <p>
-        Add some tokens {" "}
-        <a href={"https://console.circle.com/faucet"} target="_blank">
-          Faucet
-        </a>
-      </p>
+      <div className="info-container">
+        <div className="info-details">
+          <p>
+            Wallet ID: <span className="wallet-id">{wallet_id}</span>
+          </p>
+          <p>
+            Add some tokens{" "}
+            <a
+              href={"https://console.circle.com/faucet"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Faucet
+            </a>
+          </p>
+        </div>
+        <div className="info-image">
+          <img
+            src={blockchain === "MATIC-AMOY" ? "/polygon.png" : "/eth.jpg"}
+            alt="blockchain network"
+            className="faucet-image"
+          />
+          <p className="blockchain-name">{blockchain}</p>
+        </div>
+      </div>
       {tokenBalances.length === 0 ? (
-        <p>No tokens found.</p>
+        <p className="no-tokens">No tokens found.</p>
       ) : (
         <table className="balance-table">
           <thead>
@@ -60,7 +78,9 @@ export default function Balance() {
                     alt="coinimg"
                     className="token-image"
                   />
-                  <span>{balance.token.blockchain}</span>
+                  <span className="blockchain-name">
+                    {balance.token.blockchain}
+                  </span>
                 </td>
               </tr>
             ))}
