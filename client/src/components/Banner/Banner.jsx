@@ -45,7 +45,12 @@ const Banner = () => {
             backgroundImage: `url(${slides[currentSlide].src})`,
           }}
         >
-          <div className="banner-text">
+          <div style={{
+              color: "#fff",
+              textAlign: "center",
+              backgroundColor: "rgba(43, 47, 42, 0.5)",
+              padding: "20px",
+            }}>
             <h1>{slides[currentSlide].text}</h1>
           </div>
         </div>
