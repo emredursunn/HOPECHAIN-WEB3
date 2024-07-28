@@ -10,7 +10,7 @@ const ConnectWalletForm = ({ onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5500/getwallet", {
+      const response = await axios.post("https://hopechain-web-3-backend.vercel.app/getwallet", {
         wallet_id: walletId,
       });
       console.log(response);
