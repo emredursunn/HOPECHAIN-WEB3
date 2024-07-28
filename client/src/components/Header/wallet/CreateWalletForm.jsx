@@ -25,7 +25,7 @@ const CreateWalletForm = ({ onClose }) => {
       return;
     }
     try {
-      const response = await axios.post("http://localhost:5500/createwallet", {
+      const response = await axios.post("https://hopechain-web-3-backend.vercel.app/createwallet", {
         blockchain: selectedBlockchain.value, // Doğru değeri göndermeye dikkat edin
       });
       const wallet = response.data.wallets[0];
