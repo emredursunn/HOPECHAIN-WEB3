@@ -73,7 +73,7 @@ export default function Balance() {
                     src={
                       balance.token.blockchain === "MATIC-AMOY"
                         ? "/polygon.png"
-                        : "/eth.png"
+                        : "/eth.jpg"
                     }
                     alt="coinimg"
                     className="token-image"
