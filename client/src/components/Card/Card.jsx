@@ -22,7 +22,7 @@ const Card = ({ name, index, description, img, onDonateClick }) => {
     const destination_address = findDestinationAddressByOrganization({ name });
     console.log(destination_address);
     try {
-      const response = await axios.post("http://localhost:5500/transfertoken", {
+      const response = await axios.post("https://hopechain-web-3-backend.vercel.app/transfertoken", {
         wallet_id,
         destination_address,
         amounts: amount,
