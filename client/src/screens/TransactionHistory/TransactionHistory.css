@@ -1,0 +1,44 @@
+/* src/pages/TransactionHistory.css */
+.transaction-history {
+  padding: 20px;
+  background-color: #f4f4f4;
+  margin: 0 auto;
+}
+
+.transaction-history h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+  border: #333 solid 1px;
+}
+
+th {
+  background-color: #004d00;
+  color: white;
+}
+
+.network-cell {
+  display: flex;
+  align-items: center;
+  border: #333 solid 1px;
+}
+
+.network-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  object-fit: cover;
+}

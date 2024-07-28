@@ -1,0 +1,49 @@
+.balance-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .balance-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .balance-table th,
+  .balance-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .balance-table th {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .balance-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .balance-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Yeni Stil Ekleme */
+  .token-cell {
+    display: flex;
+    align-items: center;
+  }
+  
+  .token-image {
+    width: 24px; /* Resmin genişliği */
+    height: 24px; /* Resmin yüksekliği */
+    margin-right: 8px; /* Resim ile metin arasındaki boşluk */
+  }
+  

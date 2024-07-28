@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.logo {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.header .logo a {
+  color: #004d00; /* İstediğiniz renk */
+  text-decoration: none; /* Alt çizgiyi kaldırır */
+}
+
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #004d00;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  color: #268d07;
+}
