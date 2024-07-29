@@ -1,21 +1,22 @@
 # HopeChain
 
-**VERCEL LINK** https://hopechain-web-3-frontend.vercel.app
+**VERCEL LINK**: [https://hopechain-web-3-frontend.vercel.app](https://hopechain-web-3-frontend.vercel.app)
 
-**HopeChain** hayır kurumlarına blockchain ağı üzerinden yardım yapılmasını amaçlayan bir Web3 uygulamasıdır. Uygulama, kullanıcıların blockchain teknolojisiyle güvenli ve şeffaf bir şekilde bağış yapmalarını sağlar.
+**HopeChain** is a Web3 application designed to facilitate donations to charitable organizations through blockchain technology. The application enables users to make secure and transparent donations using blockchain.
 
-## Özellikler
+## Features
 
-- Blockchain ağı üzerinden bağış yapma
-- Güvenli ve şeffaf işlem kayıtları
-- Kolay kullanıcı arayüzü
-- Hayır kurumlarının bilgilerini görüntüleme ve bağış yapma
+- Donations through the blockchain network
+- Secure and transparent transaction records
+- User-friendly interface
+- View information about charitable organizations and make donations
 
-## Teknolojiler
+## Technologies
 
-Bu proje şu teknolojileri kullandım:
+This project uses the following technologies:
 - [React]
 - [Express.js]
 - [Zustand]
 - [Axios]
 - [Web3]
+- [Circle API]
