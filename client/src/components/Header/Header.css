@@ -1,27 +1,47 @@
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 20px;
+  flex-direction: column; /* Stacks elements vertically on small screens */
+  padding: 10px 20px;
   background-color: #f8f9fa;
   border-bottom: 1px solid #e1e1e1;
 }
 
-.logo {
-  font-size: 48px;
-  font-weight: bold;
+.header .logo {
+  font-size: 36px; /* Smaller font size on smaller screens */
+  margin-bottom: 10px;
 }
 
-.header .logo a {
-  color: #004d00; /* İstediğiniz renk */
-  text-decoration: none; /* Alt çizgiyi kaldırır */
+.nav {
+  display: flex;
+  flex-direction: column; /* Stacks nav links vertically on small screens */
+  align-items: center;
 }
 
 .nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #004d00;
+  margin: 10px 0; /* Adjust margin for vertical spacing */
 }
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row; /* Stacks elements horizontally on larger screens */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header .logo {
+    font-size: 48px; /* Larger font size on larger screens */
+    margin-bottom: 0;
+  }
+
+  .nav {
+    flex-direction: row; /* Stacks nav links horizontally on larger screens */
+  }
+
+  .nav a {
+    margin: 0 15px; /* Adjust margin for horizontal spacing */
+  }
+}
+
 
 .nav a:hover {
   text-decoration: underline;
