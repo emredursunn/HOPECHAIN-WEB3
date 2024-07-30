@@ -1,34 +1,57 @@
 .banner {
-    width: 90%; /* Banner genişliği */
-    height: 400px; /* Banner yüksekliği */
-    margin: 0 auto; /* Ortalamak için */
-    position: relative;
-    overflow: hidden;
+  width: 90%; /* Banner genişliği */
+  height: 400px; /* Banner yüksekliği */
+  margin: 0 auto; /* Ortalamak için */
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.banner-text {
+  color: white;
+  text-align: center;
+  background-color: rgba(43, 47, 42, 0.5); /* Metin arka planı için yarı saydam siyah */
+  padding: 10px; /* Daha küçük padding */
+  width: 90%; /* Metin kapsayıcısının genişliği */
+  max-width: 600px; /* Maksimum genişlik */
+  box-sizing: border-box; /* Padding ve border'ları genişliğe dahil et */
+}
+
+.banner h1 {
+  margin: 0;
+  font-size: 4vw; /* Dinamik font boyutu */
+  line-height: 1.2; /* Satır yüksekliği */
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 300px; /* Daha küçük yükseklik */
   }
-  
-  .banner-slide {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 1s ease-in-out;
+
+  .banner h1 {
+    font-size: 5vw; /* Daha küçük font boyutu */
   }
-  
-  .banner-text {
-    color: white;
-    text-align: center;
-    background-color: rgba(43, 47, 42, 0.5); /* Metin arka planı için yarı saydam siyah */
-    padding: 20px;
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 200px; /* Daha küçük yükseklik */
   }
-  
-  .banner h1 {  
-    margin: 0;
-    font-size: 48px; /* Başlık boyutu */
+
+  .banner h1 {
+    font-size: 6vw; /* Daha küçük font boyutu */
   }
-  
+}
