@@ -1,6 +1,6 @@
 # HopeChain
 
-**VERCEL LINK**: [https://hopechain-web-3-frontend.vercel.app](https://hopechain-web-3-frontend.vercel.app)
+**LIVE**: [https://hopechain-web-3-frontend.vercel.app](https://hopechain-web-3-frontend.vercel.app)
 
 **HOPECHAIN** is a Web3 application designed to facilitate donations to charitable organizations through blockchain technology. The application enables users to make secure and transparent donations using blockchain. For development, the Circle API has been utilized to manage and process transactions. 
 
