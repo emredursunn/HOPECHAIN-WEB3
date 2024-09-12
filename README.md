@@ -26,3 +26,16 @@ This project uses the following technologies:
 - [Axios]
 - [Web3]
 - [Circle API]
+
+## Installation 
+
+```git clone https://github.com/emredursunn/HOPECHAIN-WEB3.git```
+
+```cd HOPECHAIN```
+
+```npm install```
+
+```npm start```
+
+## Contact
+emredursun908@gmail.com
