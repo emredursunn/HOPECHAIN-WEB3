@@ -1,16 +1,5 @@
 /* Footer.css */
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
 .content {
   flex: 1; /* Bu, içerik alanının footer'ın üstünde genişlemesini sağlar */
 }
@@ -25,6 +14,7 @@ body {
   width: 100%;
   position: relative;
   bottom: 0;
+  margin:0;
 }
   
 .footer-content {

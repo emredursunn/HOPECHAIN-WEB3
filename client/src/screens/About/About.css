@@ -1,5 +1,7 @@
 /* src/pages/About.css */
 .about-page {
+    display:flex;
+    flex-direction: column;
     padding: 20px;
     background-color: #f4f4f4;
     max-width: 1200px;

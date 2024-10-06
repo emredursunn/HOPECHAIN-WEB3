@@ -23,8 +23,8 @@ function App() {
             />
             <Route path="/balance" element={<Balance />} />
           </Routes>
-          <Footer />
         </div>
+        <Footer />
       </Router>
     </div>
   );
