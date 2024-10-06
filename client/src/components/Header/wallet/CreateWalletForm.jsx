@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Select from "react-select";
 import "./Form.css";
 import useAuthStore from "../../../store/authStore";
-import axios from "axios";
+import { createWallet } from "../../../services/service";
 
 const blockchainOptions = [
   { value: "MATIC-AMOY", label: "Polygon (MATIC)" },
@@ -25,13 +25,8 @@ const CreateWalletForm = ({ onClose }) => {
       return;
     }
     try {
-      const response = await axios.post("https://hopechain-web-3-backend.vercel.app/createwallet", {
-        blockchain: selectedBlockchain.value, // Doğru değeri göndermeye dikkat edin
-      });
-      const wallet = response.data.wallets[0];
-      console.log(wallet.id);
-      console.log(wallet.address);
-      console.log(wallet.blockchain);
+      const data = await createWallet(selectedBlockchain.value)
+      const wallet = data.wallets[0];
       set_wallet_id(wallet.id);
       set_wallet_address(wallet.address);
       set_blockchain(wallet.blockchain);

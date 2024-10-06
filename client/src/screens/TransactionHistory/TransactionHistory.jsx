@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from "react";
 import "./TransactionHistory.css";
 import { charities } from "../../utils/charities";
-import axios from "axios";
 import useAuthStore from "../../store/authStore";
+import { getTransaction } from "../../services/service";
 
 const findOrganizationByAddress = (address) => {
   const organization = charities.find((c) => c.wallet_address === address);
@@ -20,14 +20,7 @@ const TransactionHistory = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post(
-          "https://hopechain-web-3-backend.vercel.app/gettransaction",
-          {
-            wallet_id: wallet_id,
-          }
-        );
-        const transactionsList = response.data;
-
+        const transactionsList = await getTransaction()
         const mappedTransactionsList = transactionsList.map((t) => {
           const organization = findOrganizationByAddress(t.destinationAddress);
           return { ...t, organization: organization };
@@ -38,7 +31,6 @@ const TransactionHistory = () => {
         console.error("Error fetching transactions:", error);
       }
     };
-
     fetchData();
   }, [wallet_id]);
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useAuthStore from "../../store/authStore";
-import axios from "axios";
 import "./Balance.css"; 
+import { getBalance } from "../../services/service";
 
 export default function Balance() {
   const { wallet_id, blockchain } = useAuthStore();
@@ -10,11 +10,8 @@ export default function Balance() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post("https://hopechain-web-3-backend.vercel.app/getbalance", {
-          wallet_id,
-        });
-        console.log(response.data);
-        setTokenBalances(response.data.tokenBalances);
+        const data = await getBalance(wallet_id)
+        setTokenBalances(data.tokenBalances);
       } catch (error) {
         console.log(error);
       }

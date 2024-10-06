@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Form.css";
 import useAuthStore from "../../../store/authStore";
-import axios from "axios";
+import { getWallet } from "../../../services/service";
 
 const ConnectWalletForm = ({ onClose }) => {
   const { set_wallet_id,set_wallet_address, set_blockchain } = useAuthStore();
@@ -10,14 +10,11 @@ const ConnectWalletForm = ({ onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://hopechain-web-3-backend.vercel.app/getwallet", {
-        wallet_id: walletId,
-      });
-      console.log(response);
+      const data = await getWallet(walletId)
       alert("Giriş yapıldı!");
-      set_wallet_id(response.data.wallet.id);
-      set_wallet_address(response.data.wallet.address);
-      set_blockchain(response.data.wallet.blockchain);
+      set_wallet_id(data.wallet.id);
+      set_wallet_address(data.wallet.address);
+      set_blockchain(data.wallet.blockchain);
       onClose();
     } catch (error) {
       alert("Geçerli ID giriniz!");

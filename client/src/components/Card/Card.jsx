@@ -3,7 +3,7 @@ import "./Card.css";
 import { useSpring, animated } from "@react-spring/web";
 import { charities } from "../../utils/charities";
 import useAuthStore from "../../store/authStore";
-import axios from "axios";
+import { transferToken } from "../../services/service";
 
 const findDestinationAddressByOrganization = ({ name }) => {
   const organization = charities.find((c) => c.name === name);
@@ -22,7 +22,7 @@ const Card = ({ name, index, description, img, onDonateClick }) => {
     const destination_address = findDestinationAddressByOrganization({ name });
     console.log(destination_address);
     try {
-      const response = await axios.post("https://hopechain-web-3-backend.vercel.app/transfertoken", {
+      const response = await transferToken({
         wallet_id,
         destination_address,
         amounts: amount,
