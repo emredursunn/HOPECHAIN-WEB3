@@ -6,15 +6,15 @@ import { useSpring, animated } from "@react-spring/web";
 const slides = [
   {
     src: "https://upload.wikimedia.org/wikivoyage/en/thumb/2/29/EarthquakeBanner3.jpg/1200px-EarthquakeBanner3.jpg",
-    text: "Yardım Et, Değişim Yarat! Dünyanın dört bir yanındaki insanlara yardım elinizi uzatın ve büyük değişimlere öncülük edin.",
+    text: "Donate and Give Life. Give hand for people where lives all around of world and lead big revolution.",
   },
   {
     src: "https://clcfc.org/wp-content/uploads/2024/01/BANNERCLC-1200X400PX-1.png",
-    text: "Topluluklara Yardım Eli Uzatın. Yerel ve küresel topluluklara destek olun, ihtiyacı olanlara umut ve yardım getirin.",
+    text: "Give a hand to organizations. Support local and global organizations. Bring hope to who needs.",
   },
   {
     src: "https://t3.ftcdn.net/jpg/02/87/64/68/360_F_287646869_EpBkmeh4ESmhE8jmSRYd8JH1BVfXoRxs.jpg",
-    text: "Web3 ile Güvenli Bağış Yapın. Web3 teknolojileri kullanarak güvenli ve şeffaf bağış süreçleri oluşturun.",
+    text: "Donate safer with Hopechain. Throw a step to web3 world and create safe donation progress.",
   },
 ];
 
@@ -24,9 +24,9 @@ const Banner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-    }, 5000); // Her 5 saniyede bir slaytı değiştir
+    }, 5000); 
 
-    return () => clearInterval(interval); // Temizle
+    return () => clearInterval(interval); // Clear
   }, []);
 
   const props = useSpring({

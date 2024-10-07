@@ -59,11 +59,11 @@ const Card = ({ name, index, description, img, onDonateClick }) => {
               value={amount}
               onChange={handleAmountChange}
               className="amount-input"
-              placeholder="Bağışlanacak Tutar"
-              min={0}
+              placeholder="Amount"
+              min={0.000000001}
             />
             <button className="donate-button" onClick={handleOnDonateClick}>
-              Bağışla
+              Donate
             </button>
           </div>
         </div>

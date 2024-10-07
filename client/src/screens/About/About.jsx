@@ -5,29 +5,29 @@ import "./About.css"; // CSS dosyasını içe aktarın
 const About = () => {
   return (
     <div className="about-page">
-      <h1>HOPECHAIN Hakkında</h1>
+      <h1>About Us</h1>
       <section>
-        <h2>Sitemizin Amacı</h2>
+        <h2>Vision</h2>
         <p>
-          HOPECHAIN, blockchain teknolojisini kullanarak yardım projelerini daha şeffaf ve güvenilir hale getirmeyi amaçlayan bir platformdur. Yardım ve bağış işlemlerini, merkeziyetsiz bir yapıda ve yüksek güvenlik standartlarıyla gerçekleştirmeyi hedefliyoruz.
+          Hopechain is a platform which aims to make donate operations easier, safer and rewarding with using blockchain technology.
         </p>
       </section>
       <section>
-        <h2>Blockchain Teknolojisi Neden Kullanılıyor?</h2>
+        <h2>Why blockchain?</h2>
         <p>
-          Blockchain teknolojisi, işlemlerin şeffaf ve değiştirilemez bir şekilde kayıt altına alınmasını sağlar. Bu, bağışların tam olarak nereye gittiğini görmenizi ve işlemlerin doğru bir şekilde gerçekleştirildiğinden emin olmanızı sağlar. Ayrıca, akıllı sözleşmeler sayesinde otomatik ve güvenli işlemler gerçekleştirilebilir.
+          Blockchain provides to save transactions as unchangeable and transparent. So, donater can see the place where his/her coins. has transferred. Also with smart contrracts, transactions can be completed successfully.
         </p>
       </section>
       <section>
-        <h2>Cross-Chain Transferler</h2>
+        <h2>Cross-Chain Transfers</h2>
         <p>
-          HOPECHAIN, farklı blockchain ağları arasında bağış ve yardım transferlerini mümkün kılar. Bu, kullanıcıların farklı ağlarda bulunan varlıklarını birleştirebilmelerini ve diğer blockchain ağlarına transfer edebilmelerini sağlar. Örneğin, Ethereum'dan Polygon'a transfer yapabilir ve tüm işlemleri güvenli bir şekilde gerçekleştirebilirsiniz.
+          Hopechain provides transactions between different blockchain networks. For example, donater can transfer coin from Ethereum to Polygon. This provides faster transactions.
         </p>
       </section>
       <section>
-        <h2>Amacımız ve Gelecek Planlarımız</h2>
+        <h2>Future Plans</h2>
         <p>
-          Amacımız, global yardım projelerini desteklemek ve blockchain teknolojisi aracılığıyla daha fazla şeffaflık ve güvenlik sağlamaktır. Gelecek planlarımız arasında daha fazla blockchain ağı desteği eklemek, kullanıcı deneyimini iyileştirmek ve yardım projelerinin daha geniş bir kitleye ulaşmasını sağlamak yer almaktadır.
+          Our future is support global help organizations and provide safer, faster transactions with new technologies. In future, we aims to add more blockchain network support to our system, improve user experience and reach more people.
         </p>
       </section>
     </div>
