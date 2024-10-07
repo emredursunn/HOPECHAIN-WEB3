@@ -20,7 +20,7 @@ const TransactionHistory = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const transactionsList = await getTransaction()
+        const transactionsList = await getTransaction(wallet_id)
         const mappedTransactionsList = transactionsList.map((t) => {
           const organization = findOrganizationByAddress(t.destinationAddress);
           return { ...t, organization: organization };

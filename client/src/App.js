@@ -10,7 +10,7 @@ import Balance from "./screens/Balance/Balance";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Router>
         <Header />
         <div className="content">
