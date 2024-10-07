@@ -1,4 +1,6 @@
 .transaction-history {
+  display:flex;
+  flex-direction: column;
   padding: 20px;
   background-color: #f4f4f4;
   margin: 0 auto;
