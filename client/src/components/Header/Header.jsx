@@ -49,7 +49,7 @@ const Header = () => {
           <Link to="/">HOPECHAIN</Link>
         </div>
         <nav className="nav">
-          {true ? // wallet_id 
+          {wallet_id ?  
           (
             <>
               <Link to="/about">Hakkında</Link>
